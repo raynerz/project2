@@ -1,0 +1,115 @@
+%Vorlage
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel} %Für die indirekte Angabe von Umlauten. Es müssen dann Umlaute wie folgt im Code angegeben werden: "a "o "u "s.
+
+\usepackage[utf8]{inputenc}
+%dieses Paket ermöglicht uns, Umlaute im Text als solche eingeben zu können (Windows/Linux)
+
+%\usepackage[applemac]{inputenc}
+%Mac-Nutzer, die Ihre Latex-Dateien lokal kompilieren wollen, müssen dieses Paket aktivieren, um Umlaute im Code direkt angeben zu können.
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{wrapfig}
+\usepackage{hyperref}% für die Einbettung von Hyperlinks
+\usepackage{multirow}
+\usepackage[round]{natbib}
+
+
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{interview}{Interview}[section]
+%\newtheorem{satz}{Satz}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{note}{Note}[section]
+%\newtheorem{bibliography}{Bibliography}[section]
+
+% Margins
+\usepackage[left=25mm,right=25mm,bottom=20mm,top=25mm]{geometry} % Document Margins
+\setlength{\topmargin}{0cm}
+\setlength{\parindent}{5mm}
+\setlength{\parskip}{2mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\oddsidemargin}{0cm}
+%\pagestyle{headings}
+
+
+
+\begin{document}
+\thispagestyle{empty}
+\vspace*{-3cm}
+\begin{center}
+\large \textsc{Bern University of Applied Sciences}
+\vspace{0.5cm}
+\hrule
+\vspace{5.5cm}
+{\Large \textsc{Documentation\\
+(BTI7302-Projet 2)}}\\
+{\large HS 2020/21}\\
+\vspace{1cm}
+{\Large \bf
+!!! [NOM DU PROJET] !!!}\\
+\vspace*{1cm}
+{\large Referent:  Prof. Dr. Ronchetti Tiziano}
+\end{center}
+\vspace*{5cm}
+{\large
+
+\hspace*{7cm}
+\parbox{8.2cm}
+{
+\begin{tabular}{ll}
+Submitted by & Rayner Oswaldo Däppen && Emeline Lieberherr\\
+
+Submission deadline: & [to de defined]
+
+\end{tabular}}}
+
+\newpage
+\pagenumbering{Roman}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+%Und nun kommen wir zur Arbeit und fangen an die Seiten mit Arabischen Zahlen zu zählen
+\section{Project overview}\label{Project overview}
+
+\section{Scope}\label{Scope}
+
+\section{Goals}\label{Goals}
+
+\section{Requirements}\label{Requirements}
+
+
+\begin{itemize}
+  \item Put in place an enviroment to run deep learning models
+  \item Organise the work environement and define a structure of work
+  \item Prepare the data to be used by the model
+  \item Find the lines of the retina and chroid to define the XXX
+  \item Extract a surface form the lines found to define the XXX width
+\end{itemize}
+
+
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{OCT_kaggle}
+Retinal OCT Images (optical coherence tomography),
+\\\texttt{https://www.kaggle.com/paultimothymooney/kermany2018?}
+
+\bibitem{OCT_dataset}
+Eye OCT Datasets,
+\\\texttt{https://www.kaggle.com/kmader/eye-oct-datasets}
+
+\bibitem{gitlab_gitkraken_doc}
+Gitlab - GitKraken documentation,
+\\\texttt{https://support.gitkraken.com/integrations/gitlab/}
+
+\end{thebibliography}
+
+
+
+\end{document}
