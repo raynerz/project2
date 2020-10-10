@@ -1,0 +1,134 @@
+%Vorlage
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel} %Für die indirekte Angabe von Umlauten. Es müssen dann Umlaute wie folgt im Code angegeben werden: "a "o "u "s.
+
+\usepackage[utf8]{inputenc}
+%dieses Paket ermöglicht uns, Umlaute im Text als solche eingeben zu können (Windows/Linux)
+
+%\usepackage[applemac]{inputenc}
+%Mac-Nutzer, die Ihre Latex-Dateien lokal kompilieren wollen, müssen dieses Paket aktivieren, um Umlaute im Code direkt angeben zu können.
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{wrapfig}
+\usepackage{hyperref}% für die Einbettung von Hyperlinks
+\usepackage{multirow}
+\usepackage[round]{natbib}
+
+
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{interview}{Interview}[section]
+%\newtheorem{satz}{Satz}[section]
+%\newtheorem{example}{Example}[section]
+%\newtheorem{note}{Note}[section]
+%\newtheorem{bibliography}{Bibliography}[section]
+
+% Margins
+\usepackage[left=25mm,right=25mm,bottom=20mm,top=25mm]{geometry} % Document Margins
+\setlength{\topmargin}{0cm}
+\setlength{\parindent}{5mm}
+\setlength{\parskip}{2mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\oddsidemargin}{0cm}
+%\pagestyle{headings}
+
+
+
+\begin{document}
+\thispagestyle{empty}
+\vspace*{-3cm}
+\begin{center}
+\large \textsc{Bern University of Applied Sciences}
+\vspace{0.5cm}
+\hrule
+\vspace{5.5cm}
+{\Large \textsc{Seminar work\\
+(BTI7311-Séminaire d'informatique)}}\\
+{\large HS 2020/21}\\
+\vspace{1cm}
+{\Large \bf
+Executive Summary of a Paper on Cyber Threat Intelligence Sharing}\\
+\vspace*{1cm}
+{\large Referent:  Prof. Dr. Simon Kramer}
+\end{center}
+\vspace*{5cm}
+{\large
+
+\hspace*{7cm}
+\parbox{8.2cm}
+{
+\begin{tabular}{ll}
+Submitted by & Emeline Lieberherr\\
+
+Submission deadline: & Friday, January 8th, 2021
+
+\end{tabular}}}
+
+\newpage
+\pagenumbering{Roman}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+%Und nun kommen wir zur Arbeit und fangen an die Seiten mit Arabischen Zahlen zu zählen
+\section{section}\label{intro}
+Diese Vorlage dient der Erklärung und hat keinen wissenschaftlichen Wert.
+
+
+%Definiert den Seitenkopf bei einseitigen Dokumenten. Bei einseitigen Dokumenten gilt jede Seite als rechte Seite". Der Befehl hat nur dann eine Wirkung, wenn der gerade gültige Seitenstil einen Seitenkopf zuläßt.
+%{\setlength{\parindent}{1cm}
+%Legt die Einrücktiefe der ersten Zeile für alle folgenden Absätze fest.
+
+\section{section}\label{body}
+\markright{Hauptteil}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+
+\subsection{sub}
+test citation \cite{einstein}
+\subsubsection{sub sub}
+
+\markboth{}{}
+%\begin{bibliography}{99}
+%\bibitem{sandmann} Sandmann, K.; (2010): {\it Einführung in die Stochastik der Finanzmärkte}. Springer-Verlag, Berlin.
+%\end{bibliography}
+
+\newpage
+\begin{thebibliography}{9}
+\bibitem{latexcompanion}
+Michel Goossens, Frank Mittelbach, and Alexander Samarin.
+\textit{The \LaTeX\ Companion}.
+Addison-Wesley, Reading, Massachusetts, 1993.
+
+\bibitem{einstein}
+Albert Einstein.
+\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German)
+[\textit{On the electrodynamics of moving bodies}].
+Annalen der Physik, 322(10):891–921, 1905.
+
+\bibitem{knuthwebsite}
+Knuth: Computers and Typesetting,
+\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+\end{thebibliography}
+
+
+
+\newpage
+\thispagestyle{empty}
+\markboth{}{}
+  \normalsize
+\begin{center}
+\huge{\bf Declaration of Independence}\\[40mm]
+\end{center}
+\large
+I affirm that the above work has been produced by myself without any unauthorized assistance and without the use of any other means than those indicated, and that I have marked as such all passages that have been taken literally or meaningfully from published or unpublished writings.\\[50mm]
+Bienne, the \today
+
+\newpage
+
+
+
+\end{document}
