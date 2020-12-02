@@ -1,0 +1,123 @@
+%Vorlage
+\documentclass[12pt,a4paper]{scrartcl}
+\usepackage[english]{babel} %Für die indirekte Angabe von Umlauten. Es müssen dann Umlaute wie folgt im Code angegeben werden: "a "o "u "s.
+
+\usepackage[utf8]{inputenc}
+%Math
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{braket}
+\newcommand{\tens}[1]{% https://tex.stackexchange.com/questions/171788/always-have-the-ring-of-the-tensor-product-below-the-otimes -> Tensor Product
+  \mathbin{\mathop{\otimes}\displaylimits_{#1}}%
+}
+%Page numbers
+\usepackage{enumerate}
+%Graphics
+\usepackage{graphicx}
+\usepackage{floatrow}
+\graphicspath{{./images/}}
+%Quantum circuits http://mirrors.ibiblio.org/CTAN/graphics/pgf/contrib/quantikz/quantikz.pdf
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
+\usepackage{lscape}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{wrapfig}
+\usepackage{hyperref}% für die Einbettung von Hyperlinks
+\def\UrlBreaks{\do\/\do-}
+\usepackage{multirow}
+\usepackage{csquotes} %Quotations
+
+
+% Margins
+%\usepackage{geometry} % Document Margins
+%\setlength{\topmargin}{0cm}
+%\setlength{\parindent}{5mm}
+%\setlength{\parskip}{2mm}
+%\setlength{\evensidemargin}{0mm}
+%\setlength{\oddsidemargin}{0cm}
+\pagestyle{headings}
+
+
+
+\begin{document}
+\thispagestyle{empty}
+\vspace*{-3cm}
+\begin{center}
+\large \textsc{Bern University of Applied Sciences}
+\vspace{0.5cm}
+\hrule
+\vspace{5.5cm}
+{\Large \textsc{Project II - BTI7302}}\\
+{\large HS 2020/21}\\
+\vspace{1cm}
+{\Large \bfseries
+Detection of early choroidal thickness changes in myopic Asian school children}\\
+\vspace*{1cm}
+{\large Referent:  Prof. Dr. Tiziano Ronchetti}
+\end{center}
+\vspace*{1cm}
+
+\begin{abstract}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{abstract}
+
+\vspace{2cm}
+\hspace*{5.2cm}
+\parbox{8.2cm}
+
+\begin{tabular}{ll}
+
+Submitted by: & Emeline Liebeherr\\
+& Rayner Oswaldo Däppen\\
+
+Submission deadline: & Friday, January 8th, 2021
+
+
+\end{tabular}
+
+\newpage
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\listoftables
+
+\newpage
+\pagenumbering{arabic}
+%Und nun kommen wir zur Arbeit und fangen an die Seiten mit Arabischen Zahlen zu zählen
+
+\section{Introduction}\label{s:introduction}
+
+\section{Medical Background}\label{s:medical_background}
+
+\section{Technical Background}
+\section{Conclusion}
+\section{Future Work}
+
+
+\markboth{}{}
+
+\newpage
+
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{bibli} % Entries are in the "bibi.bib" file
+
+
+
+
+\newpage
+\thispagestyle{empty}
+\markboth{}{}
+  \normalsize
+\begin{center}
+\huge{\textbf{ Declaration of Independence}}\\[40mm]
+\end{center}
+\large
+I affirm that the above work has been produced by myself without any unauthorized assistance and without the use of any other means than those indicated, and that I have marked as such all passages that have been taken literally or meaningfully from published or unpublished writings.\\[50mm]
+Bienne, the \today
+
+\newpage
+
+
+
+\end{document}
