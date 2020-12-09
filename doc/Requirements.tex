@@ -1,40 +1,71 @@
 %Vorlage
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{scrartcl}
 \usepackage[english]{babel} %Für die indirekte Angabe von Umlauten. Es müssen dann Umlaute wie folgt im Code angegeben werden: "a "o "u "s.
 
 \usepackage[utf8]{inputenc}
-%dieses Paket ermöglicht uns, Umlaute im Text als solche eingeben zu können (Windows/Linux)
-
-%\usepackage[applemac]{inputenc}
-%Mac-Nutzer, die Ihre Latex-Dateien lokal kompilieren wollen, müssen dieses Paket aktivieren, um Umlaute im Code direkt angeben zu können.
-
+%Math
 \usepackage{amsmath, amsthm, amssymb}
+\usepackage{braket}
+\newcommand{\tens}[1]{% https://tex.stackexchange.com/questions/171788/always-have-the-ring-of-the-tensor-product-below-the-otimes -> Tensor Product
+  \mathbin{\mathop{\otimes}\displaylimits_{#1}}%
+}
+%Page numbers
 \usepackage{enumerate}
+%Graphics
 \usepackage{graphicx}
+\usepackage{floatrow}
+\graphicspath{{./images/}}
+%Quantum circuits http://mirrors.ibiblio.org/CTAN/graphics/pgf/contrib/quantikz/quantikz.pdf
+\usepackage{tikz}
+\usetikzlibrary{quantikz}
 \usepackage{lscape}
 \usepackage{setspace}
 \onehalfspacing
 \usepackage{wrapfig}
 \usepackage{hyperref}% für die Einbettung von Hyperlinks
+\def\UrlBreaks{\do\/\do-}
 \usepackage{multirow}
-\usepackage[round]{natbib}
+\usepackage{csquotes} %Quotations
 
-
-%\newtheorem{definition}{Definition}[section]
-%\newtheorem{interview}{Interview}[section]
-%\newtheorem{satz}{Satz}[section]
-%\newtheorem{example}{Example}[section]
-%\newtheorem{note}{Note}[section]
-%\newtheorem{bibliography}{Bibliography}[section]
 
 % Margins
-\usepackage[left=25mm,right=25mm,bottom=20mm,top=25mm]{geometry} % Document Margins
-\setlength{\topmargin}{0cm}
-\setlength{\parindent}{5mm}
-\setlength{\parskip}{2mm}
-\setlength{\evensidemargin}{0mm}
-\setlength{\oddsidemargin}{0cm}
-%\pagestyle{headings}
+%\usepackage{geometry} % Document Margins
+%\setlength{\topmargin}{0cm}
+%\setlength{\parindent}{5mm}
+%\setlength{\parskip}{2mm}
+%\setlength{\evensidemargin}{0mm}
+%\setlength{\oddsidemargin}{0cm}
+\pagestyle{headings}
+
+%Code
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
 
 
 
@@ -46,28 +77,35 @@
 \vspace{0.5cm}
 \hrule
 \vspace{5.5cm}
-{\Large \textsc{Documentation\\
-(BTI7302-Projet 2)}}\\
+{\Large \textsc{Written Report\\
+(BTI7311-Informatik Seminar)}}\\
 {\large HS 2020/21}\\
 \vspace{1cm}
-{\Large \bf
-!!! [NOM DU PROJET] !!!}\\
+{\Large \bfseries
+Computer vision methods for detection of early choroidal thickness changes in myopic Asian school children}\\
+Requirements set
 \vspace*{1cm}
-{\large Referent:  Prof. Dr. Ronchetti Tiziano}
+{\large Referent:  Prof. Dr. Tiziano Ronchetti}
 \end{center}
-\vspace*{5cm}
-{\large
+\vspace*{1cm}
 
-\hspace*{7cm}
+\begin{abstract}
+
+\end{abstract}
+
+\vspace{2cm}
+\hspace*{5.2cm}
 \parbox{8.2cm}
-{
+
 \begin{tabular}{ll}
-Submitted by & Rayner Oswaldo Däppen && Emeline Lieberherr\\
 
-Submission deadline: & [to de defined]
+Submitted by: & Emeline Liebeherr 
+& Rayner Oswaldo Däppen\\
 
-\end{tabular}}}
+Submission deadline: & Friday, January 8th, 2021
 
+
+\end{tabular}
 \newpage
 \pagenumbering{Roman}
 \tableofcontents
